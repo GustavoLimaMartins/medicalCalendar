@@ -1,0 +1,19 @@
+@import url('styles/cabecalho.css');
+@import url('styles/agenda.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --preto-nome: #464646;
+    --cinza-local: #A3A3A3;
+    --branco-background: #F6F6F6;
+    --branco-card: #FFFFFF;
+    --laranja-botao: #FFB050;
+    --azul-botao: #4894FF;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: var(--branco-background);
+}

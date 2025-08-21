@@ -1,0 +1,25 @@
+header{
+    padding: 2em 5em 1.5em 1em;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+    .header__container{
+        padding: 0.25em 0;
+    }
+
+    .img__person-circle{
+        border-radius: 50%;
+    }
+
+    .medico__nome{
+        color: var(--preto-nome);
+        margin-bottom: 0.25em;
+        font-size: 1.75em;
+        font-weight: 700;
+    }
+
+    .texto__abaixo-nome{
+        color: var(--cinza-local);   
+    }

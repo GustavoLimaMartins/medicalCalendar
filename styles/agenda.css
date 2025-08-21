@@ -1,0 +1,200 @@
+.nome__dia{
+    display: block;
+    font-weight: 700;
+    color: var(--preto-nome);
+    padding-left: 1.25em;
+    margin: 1.5em 0;
+}
+
+.divisor__dia{
+    width: 100%;
+    height: 2px;
+    background-color: var(--branco-background);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    margin-bottom: 1em;
+}
+
+.card__paciente{
+    display: flex;
+    flex-direction: column;
+    margin: 1.125em 1em;
+    border: 2px none;
+    border-radius: 8px;
+    background-color: var(--branco-card);
+}
+    .card__paciente__descricao, .local__paciente, .paciente__atendimento, .botoes__paciente{
+        display: flex;
+    }
+
+    .card__paciente__descricao, .horario__paciente, .botoes__paciente{
+        padding: 0 1em;
+    }
+
+    .card__paciente__descricao{
+        align-items: center;
+    }
+
+        .paciente__atendimento, .local__paciente{
+            gap: 0.5em;
+        }
+
+        .local__paciente{
+            align-items: center;
+        }
+
+        .paciente__atendimento{
+            flex-direction: column;
+            margin: 0.5em 0;
+        }
+
+        .img__paciente{
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin: 1.25em 1em 1em 0.5em;
+        }
+
+        .icon__local{
+            width: 16px;
+            height: 11px;
+        }
+
+        .icon__local-pin{
+            width: 13.33px;
+            height: 16px;
+        }
+
+        .icon__chat{
+            width: 32px;
+            height: 32px;
+            margin-left: 5em;
+        }
+    
+        .nome__paciente{
+            font-size: 0.85em;
+            font-weight: 700;
+            color: var(--preto-nome);
+        }
+
+        .descricao__local{
+            font-size: 0.75em;
+            font-weight: 400;
+            color: var(--cinza-local);
+        }
+
+    .divisor__descricao{
+        color: var(--branco-background);
+        background-color: var(--branco-background);
+        margin: 0 auto;
+        margin-bottom: 0.75em;
+        height: 2px;
+        width: 90%;
+        border: 0 none;
+    }
+
+    .horario__paciente{
+        margin-left: 1em;
+        font-size: 0.75em;
+        margin-bottom: 0.75em;
+    }
+
+    .botoes__paciente{
+        align-items: center;
+        justify-content: center;
+        gap: 1.2em;
+        margin-bottom: 1em;
+    }
+
+    .btn__audio{
+        color: var(--preto-nome);
+        font-weight: 500;
+        background-color: var(--branco-card);
+        border: 2px solid var(--branco-background);
+    }
+
+    .btn__video{
+        color: var(--branco-card);
+        font-weight: 500;
+        background-color: var(--laranja-botao);
+    }
+
+    .btn__endereco{
+        display: block;
+        color: var(--branco-card);
+        width: 80%;
+        padding: 13px 43.85px;
+        text-align: center;
+        background-color: var(--azul-botao);
+    }
+
+    .btn__video, .btn__audio, .btn__endereco{
+        font-size: 0.8em;
+        border-radius: 8px;
+        padding: 13px 16px;
+        text-decoration: none;
+    }
+
+    .rodape__opcoes{
+        display: flex;
+        gap: 2.5em;
+        justify-content: center;
+        width: 100%;
+        position: fixed;
+        padding: 0.75em 0;
+        bottom: 0;
+        background-color: var(--branco-card);
+        border-radius: 8px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    }
+
+@media screen and (min-width: 640px){
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 1em 1em;
+    }
+
+    .nome__dia, .divisor__dia{
+        display: block;
+        width: 100%;
+    }
+
+        .card__paciente{
+            width: 45%;
+            margin: 0 auto;
+        }
+
+            .card__paciente__descricao{
+                margin-left: 0.5em;
+            }
+
+                .icon__chat{
+                    margin-left: 20%;
+                }
+
+            .horario__paciente{
+                margin-left: 1.35em;
+            }
+
+    .rodape__opcoes{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1440px){
+        .card__paciente{
+            width: 30%;
+        }
+
+            .icon__chat{
+                margin-left: 42%;
+            }
+
+        .btn__audio, .btn__video, .btn__endereco{
+            padding: 13px 40px;
+        }
+
+        strong + .card__paciente{
+            margin: 1.125em 1.5em;
+        }
+}
