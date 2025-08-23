@@ -121,14 +121,19 @@
     .btn__endereco{
         display: block;
         color: var(--branco-card);
-        width: 80%;
+        width: 82.5%;
         padding: 13px 43.85px;
         text-align: center;
         background-color: var(--azul-botao);
     }
 
+    .btn__audio, .btn__video{
+        text-align: center;
+        width: 32.5%;
+    }
+
     .btn__video, .btn__audio, .btn__endereco{
-        font-size: 0.8em;
+        font-size: 0.6em;
         border-radius: 8px;
         padding: 13px 16px;
         text-decoration: none;
@@ -161,7 +166,7 @@
 
         .card__paciente{
             width: 45%;
-            margin: 0 auto;
+            margin: 1em auto;
         }
 
             .card__paciente__descricao{
@@ -169,7 +174,7 @@
             }
 
                 .icon__chat{
-                    margin-left: 20%;
+                    margin-left: auto;
                 }
 
             .horario__paciente{
@@ -182,19 +187,20 @@
 }
 
 @media screen and (min-width: 1440px){
-        .card__paciente{
-            width: 30%;
-        }
+    .menu__lateral{
+        display: block;
+    }
 
-            .icon__chat{
-                margin-left: 42%;
-            }
+    .card__paciente{
+        width: 30%;
+    }
 
-        .btn__audio, .btn__video, .btn__endereco{
-            padding: 13px 40px;
-        }
+    .btn__audio, .btn__video, .btn__endereco{
+        font-size: 0.8em;
+        padding: 13px 40px;
+    }
 
-        strong + .card__paciente{
-            margin: 1.125em 1.5em;
-        }
+    strong + .card__paciente{
+        margin: 1.125em 1.75em;
+    }
 }

@@ -16,4 +16,56 @@ body{
     font-size: 16px;
     font-weight: 400;
     background-color: var(--branco-background);
+    display: flex;
+    flex-direction: row;
 }
+
+body > section{
+    margin: 0 auto;
+}
+
+.menu__lateral{
+    display: none;
+}
+
+@media screen and (min-width: 1440px){
+    aside + section{
+        border-left: 3px solid var(--cinza-local);
+        border-width: 100%;
+    }
+    
+    .menu__lateral{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin: 2em 2em 0 1em;
+    }
+
+        .menu__lateral__link{
+            display: flex;
+            margin: 0.5em 0;
+            text-decoration: none;
+        }
+
+        .menu__lateral__link > h2{
+            margin: auto 0.75em;
+            color: var(--azul-botao);
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .menu__lateral__link + .menu__lateral__link h2{
+            color: var(--cinza-local);
+            font-weight: 300;
+        }
+        
+        .menu__lateral__link + .menu__lateral__link img{
+            opacity: 30%;
+        }
+
+        .img__menu__lateral{
+            width: 32px;
+            height: 26px;
+        }
+}
+
