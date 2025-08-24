@@ -1,5 +1,6 @@
 @import url('styles/cabecalho.css');
 @import url('styles/agenda.css');
+@import url('styles/flutuante.css');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
@@ -20,8 +21,12 @@ body{
     flex-direction: row;
 }
 
+main{
+    width: 100vw;
+}
+
 body > section{
-    margin: 0 auto;
+    margin: 0 0;
 }
 
 .menu__lateral{

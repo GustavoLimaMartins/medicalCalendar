@@ -1,0 +1,63 @@
+.botao__flutuante{
+    display: none;
+    position: fixed;
+    bottom: 4.75em;
+}
+
+strong ~ input{
+    display: none;
+}
+
+.botao__flutuante__localizacao, .botao__flutuante__video,
+.botao__flutuante__localizacao h2, .botao__flutuante__video h2{
+    display: flex;
+}
+
+.botao__flutuante, .botao__flutuante__localizacao, .botao__flutuante__video{
+    justify-content: right;
+    gap: 1em;
+}
+
+.botao__flutuante__texto{
+    color: var(--preto-nome);
+    font-size: 12px;
+    background-color: var(--branco-background);
+    border-radius: 16px;
+    height: fit-content;
+    width: max-content;
+    padding: 0.5em 0.75em;
+    margin: auto 0;
+}
+
+.botao__flutuante a > img, label img{
+    width: 50px;
+    height: 50px;
+}
+
+strong ~ label, strong ~ input{
+    display: none;
+}
+
+#btn__expandir:checked ~ .botao__flutuante{
+    display: none;
+    gap: 0.5em;
+    flex-direction: column-reverse;
+    justify-content: right;
+    bottom: 8.5em;
+    margin: 0 2em 0 0;
+}
+
+@media screen and (min-width: 360px) and (max-width: 360px){
+    #btn__expandir:checked ~ .botao__flutuante{
+        display: flex;
+        position: fixed;
+        left: 15.5%;
+    }   
+
+    strong ~ label{
+        display: flex;
+        position: fixed;
+        bottom: 5em;
+        left: 82.5%;
+    }
+}

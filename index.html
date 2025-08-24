@@ -81,6 +81,18 @@
                 </div>
             </section>
             <strong></strong>
+            <input type="checkbox" id="btn__expandir" class="rotulo__btn__expandir">
+            <label for="btn__expandir"><img src="img/adicionar fab.png" alt="consulta no local"></label>
+            <section class="botao__flutuante">    
+                <div class="botao__flutuante__video">
+                    <h2 class="botao__flutuante__texto">Nova consulta por vídeo</h2>
+                    <a href="#"><img src="img/camera fab.png" alt="consulta no local"></a>
+                </div>
+                <div class="botao__flutuante__localizacao">
+                    <h2 class="botao__flutuante__texto">Nova consulta na casa do paciente</h2>
+                    <a href="#"><img src="img/pin fab.png" alt="consulta no local"></a>
+                </div>
+            </section>
             <section class="rodape__opcoes">
                 <a href="#"><img src="img/Item1.png" alt="consultas" class="img__opcoes"></a>
                 <a href="#"><img src="img/Item2.png" alt="clientes" class="img__opcoes"></a>
@@ -243,5 +255,42 @@
             </section>
         </main>
     </section>
+        <script>
+            const checkbox = document.getElementById('btn__expandir');
+            const main = document.querySelector('main');
+
+            // criar overlay
+            const overlay = document.createElement('div');
+            overlay.style.position = 'absolute';
+            overlay.style.top = '0';
+            overlay.style.left = '0';
+            overlay.style.width = '100%';
+            overlay.style.height = '100%';
+            overlay.style.background = 'rgba(0, 0, 0, 0.5)';
+            overlay.style.pointerEvents = 'none';
+            overlay.style.opacity = '0';
+            overlay.style.transition = 'opacity 0.3s ease';
+            overlay.style.zIndex = '1'; // atrás dos elementos visíveis
+
+            // inserir overlay no main
+            main.insertBefore(overlay, main.firstChild); // fica atrás dos outros elementos
+
+            // alternar visibilidade do overlay
+            checkbox.addEventListener('change', () => {
+                overlay.style.opacity = checkbox.checked ? '1' : '0';
+            });
+        </script>
+
+        <style>
+            /* Para garantir que os elementos estejam acima do overlay */
+            .botao__flutuante {
+                position: relative;
+                z-index: 2; /* acima do overlay */
+            }
+
+            strong ~ label, strong ~ input{
+                z-index: 2;
+            }
+        </style>
 </body>
 </html>
